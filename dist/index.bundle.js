@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("//http://api.openweathermap.org/data/2.5/weather?q=London&APPID=ee4fc729e17808280bb0635af6704ce1\n\nasync function getWeather() {\n    try {\n        const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=ee4fc729e17808280bb0635af6704ce1', {mode: 'cors'});\n        const weatherData = await response.json();\n        console.log(weatherData);\n    } catch(error) {\n        console.log('oops');\n    }\n};\n\ngetWeather();\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
