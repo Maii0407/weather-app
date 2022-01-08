@@ -6,6 +6,8 @@ module.exports = {
     entry: {
         index: './src/index.js',
         style: './src/style.css',
+        display: './src/display.js',
+        logic: './src/logic.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
