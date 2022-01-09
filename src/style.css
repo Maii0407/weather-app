@@ -6,7 +6,7 @@ body {
 /*below is styling for the main containers*/
 .header-container {
     width: 100%;
-    outline: 5px dashed green;
+    color: gainsboro;
 }
 
 .content-container {
@@ -15,13 +15,11 @@ body {
 }
 
 .form-container {
-    outline: 5px dashed red;
     width: 20%;
     height: 500px;
 }
 
 .card-container {
-    outline: 5px dashed blue;
     width: 80%;
     height: 500px;
     display: flex;
@@ -59,7 +57,6 @@ form button:hover {
 .data-card {
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
     width: 80%;
 }
 
@@ -72,10 +69,16 @@ form button:hover {
 
 .weather-section {
     color: gainsboro;
+    text-indent: 50px;
+    font-size: 30px;
 }
 
 .location-section {
-    color: gainsboro
+    color: gainsboro;
+    text-indent: 50px;
+    font-size: 30px;
+    margin-top: 5px;
+    border-bottom: 3px solid white;
 }
 
 .lower-card {
@@ -87,18 +90,29 @@ form button:hover {
 
 .temp-section {
     width: 50%;
-    height: 100%;
     color: gainsboro;
+    text-align: center;
+    font-size: 90px;
+    padding-top: 5%;
 }
 
 .feels-section {
-    color: gainsboro
+    color: gainsboro;
+    text-indent: 50px;
+    font-size: 20px;
+    margin-top: 10%;
 }
 
 .wind-section {
     color: gainsboro;
+    text-indent: 50px;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .humid-section {
     color: gainsboro;
+    text-indent: 50px;
+    font-size: 20px;
+    margin-top: 10px;
 }

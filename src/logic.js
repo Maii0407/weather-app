@@ -7,7 +7,7 @@ const logic = (function() {
         try {
             const response = await fetch( link, {mode: 'cors'} );
             const weatherData = await response.json();
-            document.querySelector('.weather-section').innerText = weatherData.weather[0].description;
+            document.querySelector('.weather-section').innerText = weatherData.weather[0].description.toUpperCase();
             document.querySelector('.location-section').innerText = `${weatherData.name}, ${weatherData.sys.country}`;
             document.querySelector('.temp-section').innerText = `${weatherData.main.temp} °C`;
             document.querySelector('.feels-section').innerText = `FEELS LIKE: ${weatherData.main.feels_like} °C`;
@@ -15,7 +15,7 @@ const logic = (function() {
             document.querySelector('.humid-section').innerText = `HUMIDITY: ${weatherData.main.humidity}%`;
             console.log(weatherData);
         } catch(error) {
-            console.log('oops');
+            alert('Something went wrong maybe enter a real place next time.');
         }
     };
 
