@@ -13,8 +13,18 @@ const logic = (function() {
         }
     };
 
+    function clearText() {
+        document.querySelector('.weather-section').innerText = '';
+        document.querySelector('.location-section').innerText = '';
+        document.querySelector('.temp-section-section').innerText = '';
+        document.querySelector('.feels-section-section').innerText = '';
+        document.querySelector('.wind-section').innerText = '';
+        document.querySelector('.humid-section').innerText = '';
+    };
+
     return {
         getWeather,
+        clearText,
     }
 })();
 

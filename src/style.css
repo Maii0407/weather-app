@@ -1,17 +1,37 @@
 body {
     background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+/*below is styling for the main containers*/
+.header-container {
+    width: 100%;
+    outline: 5px dashed green;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
 }
 
 .form-container {
-    border: 5px dashed red;
+    outline: 5px dashed red;
     width: 20%;
-    height: 300px;
-    margin-top: 10%;
+    height: 500px;
 }
 
+.card-container {
+    outline: 5px dashed blue;
+    width: 80%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+/*below is styling for form section*/
 form {
     display: flex;
     flex-direction: column;
+    margin-top: 20%;
 }
 
 form input {
@@ -34,4 +54,51 @@ form button {
 
 form button:hover {
     background-color: rgba(0, 255, 0, 1);
+}
+/*below is styling for the data card*/
+.data-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    width: 80%;
+}
+
+.upper-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+}
+
+.weather-section {
+    color: gainsboro;
+}
+
+.location-section {
+    color: gainsboro
+}
+
+.lower-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+}
+
+.temp-section {
+    width: 50%;
+    height: 100%;
+    color: gainsboro;
+}
+
+.feels-section {
+    color: gainsboro
+}
+
+.wind-section {
+    color: gainsboro;
+}
+
+.humid-section {
+    color: gainsboro;
 }

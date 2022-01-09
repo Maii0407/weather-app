@@ -1,52 +1,78 @@
 
 const display = (function() {
-//section below are functions that generate the form section of the app
-    function makeFormContainer() {
+//function below makes the header of the app
+    function makeHeader() {
+        const header = document.createElement('div');
+        header.classList.add('header-container');
+        header.innerHTML = `
+            <h1>Weather App</h1>`;
+        document.body.appendChild(header);
+
+        return header;
+    };
+
+    function makeContentContainer() {
+        const content = document.createElement('div');
+        content.classList.add('content-container');
+        document.body.appendChild(content);
+
+        return content;
+    };
+
+//function below are functions that generate the form section of the app
+    function makeForm() {
         const formContainer = document.createElement('div');
         formContainer.classList.add('form-container');
-        document.body.appendChild(formContainer);
+        formContainer.innerHTML = 
+            `<form class="form">
+              <input type="text" class="search-box" placeholder="Enter Location">
+              <button type="button" class="search-btn">Search Location</button>
+             </form>`;
+        document.querySelector('.content-container').appendChild(formContainer);
 
         return formContainer;
     };
 
-    function makeForm() {
-        const form = document.createElement('form');
-        form.classList.add('form');
-        document.querySelector('.form-container').appendChild(form);
+//function below generates a card containing the weather data user requested
+    function makeCardContainer() {
+        const cardContainer = document.createElement('div');
+        cardContainer.classList.add('card-container');
+        document.querySelector('.content-container').appendChild(cardContainer);
 
-        return form;
+        return cardContainer;
+    };
+    
+    function makeDataCard() {
+        const dataCard = document.createElement('div');
+        dataCard.classList.add('data-card');
+        dataCard.innerHTML = `
+            <div class="upper-card">
+              <div class="weather-section">SANDSTORM</div>
+              <div class="location-section">DESSERT RESORT, UNOVA</div>
+            </div>
+            <div class="lower-card">
+              <div class="temp-section">50.01 °C</div>
+              <div class="misc-section">
+                <div class="feels-section">FEELS LIKE: 50 °C</div>
+                <div class="wind-section">WIND: 10 meter/second</div>
+                <div class="humid-section">HUMIDITY: 20%</div>
+              </div>
+            </div>`;
+        document.querySelector('.card-container').appendChild(dataCard);
+
+        return dataCard;
     };
 
-    function makeSearchBox() {
-        const searchBox = document.createElement('input');
-        searchBox.setAttribute('type', 'text');
-        searchBox.placeholder = 'Enter Location';
-        searchBox.classList.add('search-box');
-        document.querySelector('.form').appendChild(searchBox);
-
-        return searchBox;
-    };
-
-    function makeSearchBtn() {
-        const searchBtn = document.createElement('button');
-        searchBtn.setAttribute('type', 'button');
-        searchBtn.classList.add('search-btn');
-        searchBtn.innerText = 'Search Location';
-        document.querySelector('.form').appendChild(searchBtn);
-
-        return searchBtn;
-    };
-
-//function below generates the form section of the app
-    function makeFormSection() {
-        makeFormContainer();
+    function makeDefault() {
+        makeHeader();
+        makeContentContainer();
         makeForm();
-        makeSearchBox();
-        makeSearchBtn();
+        makeCardContainer();
+        makeDataCard();
     };
 
     return {
-        makeFormSection,
+        makeDefault,
     };
 })();
 
