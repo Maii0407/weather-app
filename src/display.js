@@ -54,7 +54,7 @@ const display = (function() {
               <div class="temp-section">50.01 °C</div>
               <div class="misc-section">
                 <div class="feels-section">FEELS LIKE: 50 °C</div>
-                <div class="wind-section">WIND: 10 meter/second</div>
+                <div class="wind-section">WIND SPEED: 10 meter/second</div>
                 <div class="humid-section">HUMIDITY: 20%</div>
               </div>
             </div>`;

@@ -5,6 +5,7 @@ const weatherApp = (function() {
     display.makeDefault();
     
     document.querySelector('.search-btn').addEventListener('click', function() {
+        logic.clearText();
         logic.getWeather();
         document.querySelector('.search-box').value = '';
     });
